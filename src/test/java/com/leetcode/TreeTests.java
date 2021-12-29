@@ -20,7 +20,7 @@ public class TreeTests {
         root.left.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
 
-        List<List<Integer>> list = (new M102LevelOrder()).levelOrder(root);
+        List<List<Integer>> list = (new MediumLevelOrder()).levelOrder(root);
         Assert.assertEquals("must be 3", 3, list.size());
 
         Assert.assertArrayEquals("level 1 has 3", new Integer[] {3}, list.get(0).toArray());
@@ -36,7 +36,7 @@ public class TreeTests {
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
 
-        List<Integer> result = (new E144PreOrder()).preorderTraversal(root);
+        List<Integer> result = (new EasyPreOrder()).preorderTraversal(root);
         Assert.assertArrayEquals("Preorder list is 1,2,3", new Integer[] {1,2,3}, result.toArray());
 
     }
@@ -47,7 +47,7 @@ public class TreeTests {
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
-        List<Integer> result = E94InOrder.inorderTraversal(root);
+        List<Integer> result = EasyInOrder.inorderTraversal(root);
         Assert.assertArrayEquals("Preorder list is 1,3,2", new Integer[] {1,3,2}, result.toArray());
 
         root = new TreeNode(1);
@@ -57,7 +57,7 @@ public class TreeTests {
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
-        List<Integer> result2 = E94InOrder.inorderTraversal(root);
+        List<Integer> result2 = EasyInOrder.inorderTraversal(root);
         Assert.assertArrayEquals("Preorder list is 4, 2, 5, 1, 6, 3, 7",
                 new Integer[] {4, 2, 5, 1, 6, 3, 7},
                 result2.toArray());
@@ -73,7 +73,7 @@ public class TreeTests {
         root.right.left = new TreeNode(9);
         root.right.right = new TreeNode(20);
 
-        M173BSTIterator iterator = new M173BSTIterator(root);
+        MediumBSTIterator iterator = new MediumBSTIterator(root);
         Assert.assertEquals("return 3", 3, iterator.next());
         Assert.assertEquals("return 7", 7, iterator.next());
         Assert.assertEquals("return true", true, iterator.hasNext());

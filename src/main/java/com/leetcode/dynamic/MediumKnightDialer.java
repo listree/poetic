@@ -81,5 +81,5 @@ public class MediumKnightDialer {
         }
         return sum;
     }
-        
+
 }

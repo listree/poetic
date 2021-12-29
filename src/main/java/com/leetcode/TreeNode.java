@@ -17,4 +17,14 @@ public class TreeNode {
         this.left = left;
         this.right = right;
     }
+
+    public TreeNode(int val, int leftVal, int rightVal) {
+        this.val = val;
+        this.left = new TreeNode(leftVal);
+        this.right = new TreeNode(rightVal);
+    }
+
+    public String toString() {
+        return "" + val;
+    }
 }

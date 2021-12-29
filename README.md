@@ -1,13 +1,17 @@
-# A poet codes!
+# Antique, coding, poetry, etc...
 
-No matter when write a poem or program
+---------------------------------------------
 
-I always apply algebra and topology
+No matter write a poem or a program
+
+Apply algebra and topology to its GAN
 
 The former helps create beautiful structure
 
-The latter morphes one business to another
+The latter morphes one type to another kind
 
-I wish I carry spirit of Ancestor Li-Bai 
+---------------------------------------------
 
-and invite Dante to code a Java Divine
+Note: GAN - Generative adversarial network
+
+---------------------------------------------
