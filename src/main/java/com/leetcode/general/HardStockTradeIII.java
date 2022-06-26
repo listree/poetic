@@ -10,10 +10,10 @@ package com.leetcode.general;
  * Poem Memory: 80.5 MB, less than 44.06% of Java online submissions for Best Time to Buy and Sell Stock III.
  */
 
-public class StockTradeIII {
+public class HardStockTradeIII {
 
     public final static void main(String[] args) {
-        StockTradeIII tester = new StockTradeIII();
+        HardStockTradeIII tester = new HardStockTradeIII();
         int[] prices = {3,3,5,0,0,3,1,4};
         System.out.println(tester.maxProfit(prices));
 

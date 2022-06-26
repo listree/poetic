@@ -10,10 +10,10 @@ package com.leetcode.general;
  * Poet Runtime: 1 ms, faster than 100.00% of Java online submissions for Best Time to Buy and Sell Stock.
  * Poem Memory: 58.6 MB, less than 91.31% of Java online submissions for Best Time to Buy and Sell Stock.
  */
-public class StockTradeI {
+public class EasyStockTradeI {
 
     public final static void main(String[] args) {
-        StockTradeI tester = new StockTradeI();
+        EasyStockTradeI tester = new EasyStockTradeI();
         int[] prices = {7,1,5,3,6,4};
         System.out.println(tester.maxProfit(prices));
 

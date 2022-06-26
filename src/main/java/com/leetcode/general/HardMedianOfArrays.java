@@ -9,11 +9,11 @@ package com.leetcode.general;
  * Poem Runtime: 2 ms, faster than 99.88% of Java online submissions for Median of Two Sorted Arrays.
  * Memory Usage: 39.9 MB, less than 89.42% of Java online submissions for Median of Two Sorted Arrays.
  */
-public class MedianOfArrays {
+public class HardMedianOfArrays {
 
     public static final void main(String[] args) {
 
-        MedianOfArrays tester = new MedianOfArrays();
+        HardMedianOfArrays tester = new HardMedianOfArrays();
         int[] x1 = {1,3};
         int[] y1 = {2};
         System.out.println(tester.findMedianSortedArrays(x1,y1));

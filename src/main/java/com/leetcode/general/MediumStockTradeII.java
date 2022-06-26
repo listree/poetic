@@ -10,10 +10,10 @@ package com.leetcode.general;
  * Poem Runtime: 1 ms, faster than 92.31% of Java online submissions for Best Time to Buy and Sell Stock II.
  * Memory Usage: 37.4 MB, less than 100.00% of Java online submissions for Best Time to Buy and Sell Stock II
  */
-public class StockTradeII {
+public class MediumStockTradeII {
     public static final void main(String[] args) {
 
-        StockTradeII tester = new StockTradeII();
+        MediumStockTradeII tester = new MediumStockTradeII();
 
         //    Example 1:    Input: [7,1,5,3,6,4]
         //    Output: 7

@@ -26,7 +26,7 @@ import java.util.*;
  */
 public class AutocompleteSystem {
 
-    public final static void main(String[ ]args) {
+    public final static void main(String[] args) {
         String[] sentences = {"i love you", "island", "iroman", "i love leetcode"};
         int[] times = {5, 3, 2, 2};
         AutocompleteSystem obj = new AutocompleteSystem(sentences, times);
@@ -53,7 +53,7 @@ public class AutocompleteSystem {
         public List<Node> myTop3 = new ArrayList<Node>();
 
         public void update(Node leaf) {
-            if(!myTop3.contains(leaf)) {
+            if (!myTop3.contains(leaf)) {
                 myTop3.add(leaf);
                 if (myTop3.size() > 3) {
                     Collections.sort(myTop3, nodeComparator);
@@ -64,11 +64,12 @@ public class AutocompleteSystem {
     }
 
     NodeComparator nodeComparator = new NodeComparator();
+
     public class NodeComparator implements Comparator<Node> {
         @Override
         public int compare(Node y1, Node y2) {
             int x = y2.myTime - y1.myTime;
-            if( x != 0)
+            if (x != 0)
                 return x;
             else
                 return y1.myString.compareTo(y2.myString);
@@ -76,6 +77,7 @@ public class AutocompleteSystem {
     }
 
     Node root = new Node();
+
     public AutocompleteSystem(String[] sentences, int[] times) {
         for (int i = 0; i < times.length; i++) {
             insertNode(sentences[i], times[i]);
@@ -84,9 +86,9 @@ public class AutocompleteSystem {
 
     private void insertNode(String str, int time) {
         Node node = root;
-        for( Character c: str.toCharArray() ) {
+        for (Character c : str.toCharArray()) {
             int i = (c == ' ') ? 26 : (c - 'a');
-            if( node.myChildren[i] == null ) {
+            if (node.myChildren[i] == null) {
                 node.myChildren[i] = new Node();
             }
             node = node.myChildren[i];
@@ -99,7 +101,7 @@ public class AutocompleteSystem {
 
         // revisit update top3
         node = root;
-        for( Character c: str.toCharArray() ) {
+        for (Character c : str.toCharArray()) {
             int i = (c == ' ') ? 26 : (c - 'a');
             node.myChildren[i].update(leaf);
             node = node.myChildren[i];
@@ -109,11 +111,12 @@ public class AutocompleteSystem {
 
     Node searchNode = root;
     String searchString = "";
+
     public List<String> input(char c) {
         List<String> top3 = new ArrayList<String>();
         int i = (c == ' ') ? 26 : (c - 'a');
 
-        if( i < 0 || i > 26 ) { // restart search
+        if (i < 0 || i > 26) { // restart search
             searchNode = root;
             insertNode(searchString, 1);
             searchString = "";
@@ -122,13 +125,15 @@ public class AutocompleteSystem {
 
         searchString += c;
 
-        if( searchNode.myChildren[i] == null )
+        if (searchNode.myChildren[i] == null)
             return top3;
 
         Collections.sort(searchNode.myChildren[i].myTop3, nodeComparator);
-        for(Node node: searchNode.myChildren[i].myTop3 )
+        for (Node node : searchNode.myChildren[i].myTop3)
             top3.add(node.myString);
 
         searchNode = searchNode.myChildren[i];
         return top3;
     }
+
+}

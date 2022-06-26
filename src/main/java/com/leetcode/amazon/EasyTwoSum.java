@@ -42,7 +42,7 @@ class EasyTwoSum {
         for(int i = 0; i < nums.length; i++) {
             int sumTarget = target - nums[i];
             if(map.containsKey(sumTarget)) {
-                return new int[] { map.get(sumTarget), i };
+                return new int[] { map.get(sumTarget) + 1, i +1 };
             }
             map.put(nums[i], i);
         }

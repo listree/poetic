@@ -1,4 +1,4 @@
-package com.leetcode.amazon;
+package com.leetcode.general;
 
 import com.leetcode.ListNode;
 

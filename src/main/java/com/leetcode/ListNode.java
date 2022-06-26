@@ -7,9 +7,6 @@ public class ListNode {
     public int val;
     public ListNode next;
 
-    public ListNode() {
-    }
-
     public ListNode(int val) {
         this.val = val;
     }
@@ -20,16 +17,17 @@ public class ListNode {
     }
 
     public String toString() {
-        return "Node" + val;
+        return "Node(" + val + "}";
     }
 
-    public String printTail() {
+    public String serializeList() {
         String string = "";
         ListNode node = this;
         while (node != null) {
-            string += node.val + "->";
+            string += node + "->";
             node = node.next;
         }
+        string += "null";
         return string;
     }
 
