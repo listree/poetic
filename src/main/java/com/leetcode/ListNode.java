@@ -17,7 +17,7 @@ public class ListNode {
     }
 
     public String toString() {
-        return "Node(" + val + "}";
+        return "Node(" + val + ")";
     }
 
     public String serializeList() {
